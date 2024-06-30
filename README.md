@@ -49,9 +49,21 @@ In the "contracts" folder, create a new file named MyToken.sol and paste the Sol
 - Go to the "Deploy & Run Transactions" tab.
 - Select "Injected Web3" in the "Environment" dropdown to use MetaMask for deployment.
 - Enter the initial supply of tokens in the constructor arguments field (e.g., 1000000 for 1,000,000 tokens).
-Ensure MyToken is selected in the "Contract" dropdown.
-Click on the "Deploy" button and confirm the transaction in MetaMask.
-Interact with the Contract:
+- Ensure MyToken is selected in the "Contract" dropdown.
+- Click on the "Deploy" button and confirm the transaction in MetaMask.
 
-Once deployed, you can interact with the contract through the "Deployed Contracts" section in Remix.
-Call the contract functions to mint tokens, burn tokens, and check balances.
+- mint(address to, uint256 amount): Call this function with the recipient address and the amount of tokens to mint. Only the contract owner can execute this function.
+- burn(uint256 amount): Call this function with the amount of tokens to burn from the caller's balance.
+- Transfer Tokens: Use the standard ERC20 transfer function to send tokens to another address.
+- Check Balance: Use the standard ERC20 balanceOf function to check the token balance of an address.
+
+  ## Author
+
+  Abhinav Singh
+
+  ## Licence
+
+  This project is licensed under the MIT License.
+
+
+
